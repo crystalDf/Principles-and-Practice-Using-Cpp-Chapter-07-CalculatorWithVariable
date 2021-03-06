@@ -99,7 +99,7 @@ Token Token_stream::get()
                     {
                         s += ch;
 
-                        if (!std::cin.get(ch) || (!isalpha(ch) && !isdigit(ch))
+                        if (!std::cin.get(ch) || (!isalpha(ch) && !isdigit(ch)))
                         {
                             break;
                         }
