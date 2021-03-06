@@ -94,11 +94,15 @@ Token Token_stream::get()
                 if (isalpha(ch))
                 {
                     string s;
-                    s += ch;
 
-                    while (std::cin.get(ch) && (isalpha(ch) || isdigit(ch)))
+                    while (true)
                     {
                         s += ch;
+
+                        if (!std::cin.get(ch) || (!isalpha(ch) && !isdigit(ch))
+                        {
+                            break;
+                        }
                     }
 
                     cin.putback(ch);
